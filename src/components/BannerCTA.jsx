@@ -18,7 +18,7 @@ const BannerCTA = () => {
                 </p>
 
                 <a
-                    href="https://wa.me/7676213057"
+                    href="https://wa.me/8867570215"
                     target="_blank"
                     className="inline-block mt-6 bg-white text-gray-900 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition"
                 >

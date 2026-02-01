@@ -20,9 +20,9 @@ const BannerCTA = () => {
                 <a
                     href="https://wa.me/8867570215"
                     target="_blank"
-                    className="inline-block mt-6 bg-white text-gray-900 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition"
+                    className="inline-block mt-6 bg-[#1cb855] text-white px-6 py-3 rounded-md font-medium hover:bg-green-600 transition"
                 >
-                    Contact on WhatsApp
+                    Schedule a Demo on WhatsApp
                 </a>
             </div>
         </section>

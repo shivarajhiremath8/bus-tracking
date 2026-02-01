@@ -49,7 +49,7 @@ const Features = () => {
                                 alt={f.title}
                                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent"></div>
 
                             <div className="relative p-8 flex flex-col justify-end h-full">
                                 <h3 className="text-white text-xl font-bold mb-2">

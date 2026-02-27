@@ -10,7 +10,7 @@ const features = [
         img: f1,
     },
     {
-        title: "Driver Identification ",
+        title: "Driver Identification",
         desc: "Automated alerts via WhatsApp or SMS when the bus is approaching, departing, or facing traffic delays.",
         img: f2,
     },
@@ -28,34 +28,43 @@ const features = [
 
 const Features = () => {
     return (
-        <section id="features" className="py-20 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-14">
-                    <h2 className="text-3xl font-bold text-gray-900">Why Schools Partner With Us</h2>
-                    <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-                        We bridge the gap between school and home with a solution that is 
+        <section id="features" className="py-24 bg-[#050505] border-t border-neutral-900">
+            <div className="max-w-6xl mx-auto px-6">
+
+                {/* Header matching the new dark theme */}
+                <div className="text-center mb-16 md:mb-20">
+                    <h2 className="text-4xl md:text-[44px] font-bold text-white tracking-tight font-montserrat leading-[1.15]">
+                        Why Schools <span className="text-[#F4C430]">Partner With Us.</span>
+                    </h2>
+                    <p className="mt-4 text-neutral-400 max-w-2xl mx-auto text-base md:text-lg font-inter">
+                        We bridge the gap between school and home with a solution that is
                         easy to deploy and simple to use.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                {/* Kept your exact grid layout, just updated the styling */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     {features.map((f, i) => (
                         <div
                             key={i}
-                            className="relative h-72 rounded-xl overflow-hidden shadow-lg group"
+                            className="relative h-72 md:h-80 rounded-3xl overflow-hidden shadow-2xl group border border-neutral-800/60"
                         >
+                            {/* Background Image */}
                             <img
                                 src={f.img}
                                 alt={f.title}
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent"></div>
 
-                            <div className="relative p-8 flex flex-col justify-end h-full">
-                                <h3 className="text-white text-xl font-bold mb-2">
+                            {/* Deepened dark gradient for perfect text contrast */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-black/60 to-transparent transition-opacity duration-500 group-hover:opacity-90"></div>
+
+                            {/* Content */}
+                            <div className="relative p-8 md:p-10 flex flex-col justify-end h-full z-10">
+                                <h3 className="text-white text-2xl font-bold mb-3 font-montserrat tracking-tight group-hover:text-[#F4C430] transition-colors">
                                     {f.title}
                                 </h3>
-                                <p className="text-gray-200 text-sm leading-relaxed">
+                                <p className="text-neutral-300 text-sm md:text-base leading-relaxed font-inter">
                                     {f.desc}
                                 </p>
                             </div>

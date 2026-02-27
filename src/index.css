@@ -1,9 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
-
-.input {
-    @apply w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900;
-}
 
 html {
     scroll-behavior: smooth;
+    background-color: #000000;
+    /* Strict black background */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Clean body text */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Force Montserrat on all headings and branded elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input {
+    @apply w-full border border-neutral-800 bg-neutral-900 text-white rounded-md px-4 py-3 text-sm focus:outline-none focus:border-[#F4C430] transition-colors;
+}
+
+@theme {
+    --animate-text-glow: textGlow 5s linear infinite;
+}
+
+@keyframes textGlow {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.animate-text-glow {
+    animation: textGlow 5s linear infinite;
 }

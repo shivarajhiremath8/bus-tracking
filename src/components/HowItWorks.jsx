@@ -104,22 +104,21 @@ const IconCheck = ({ size = 20, color = 'currentColor' }) => (
     </svg>
 );
 
-// Institutional building — columned facade with pediment
+// Clean building icon with simple windows
 const IconBuilding = ({ size = 26, color = 'currentColor' }) => (
-    <svg width={size} height={size} viewBox="0 0 26 26" fill="none">
-        {/* Pediment / roof triangle */}
-        <path d="M1 10L13 2l12 8" stroke={color} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-        {/* Main facade */}
-        <rect x="3" y="10" width="20" height="14" rx="0.5" stroke={color} strokeWidth="1.4" />
-        {/* Three columns */}
-        <line x1="7.5" y1="10" x2="7.5" y2="24" stroke={color} strokeWidth="1.25" strokeLinecap="round" />
-        <line x1="13" y1="10" x2="13" y2="24" stroke={color} strokeWidth="1.25" strokeLinecap="round" />
-        <line x1="18.5" y1="10" x2="18.5" y2="24" stroke={color} strokeWidth="1.25" strokeLinecap="round" />
-        {/* Entry door */}
-        <path d="M10.5 24v-6a2.5 2.5 0 0 1 5 0v6" stroke={color} strokeWidth="1.25" strokeLinejoin="round" />
-        {/* Flagpole */}
-        <line x1="13" y1="2" x2="13" y2="0" stroke={color} strokeWidth="1.25" strokeLinecap="round" />
-        <path d="M13 0.5l2.5 1L13 2" stroke={color} strokeWidth="1" strokeLinejoin="round" fill={color} fillOpacity="0.5" />
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+        {/* Roof */}
+        <path d="M3 9L12 3l9 6" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        {/* Building body */}
+        <rect x="3" y="9" width="18" height="12" rx="0.75" stroke={color} strokeWidth="1.5" strokeLinejoin="round" />
+        {/* Windows - top row */}
+        <rect x="6" y="12" width="2.5" height="2.5" rx="0.4" stroke={color} strokeWidth="1" />
+        <rect x="10.5" y="12" width="2.5" height="2.5" rx="0.4" stroke={color} strokeWidth="1" />
+        <rect x="15" y="12" width="2.5" height="2.5" rx="0.4" stroke={color} strokeWidth="1" />
+        {/* Windows - bottom row */}
+        <rect x="6" y="17" width="2.5" height="2.5" rx="0.4" stroke={color} strokeWidth="1" />
+        <rect x="10.5" y="17" width="2.5" height="2.5" rx="0.4" stroke={color} strokeWidth="1" />
+        <rect x="15" y="17" width="2.5" height="2.5" rx="0.4" stroke={color} strokeWidth="1" />
     </svg>
 );
 
@@ -201,27 +200,13 @@ export default function HowItWorks() {
             style={{ fontFamily: "'Inter', sans-serif", background: '#000000' }}
             className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 py-24"
         >
-            {/* Heading — reduced */}
-            <div style={{ textAlign: 'center', marginBottom: 48, position: 'relative', zIndex: 1, maxWidth: 600 }}>
-                <h2 style={{
-                    color: '#fff',
-                    fontWeight: 800,
-                    fontSize: 'clamp(1.5rem, 3vw, 2.25rem)',
-                    lineHeight: 1.15,
-                    letterSpacing: '-0.025em',
-                    margin: '0 0 12px 0',
-                    fontFamily: 'Montserrat',
-                }}>
-                    Every stop. Every update.<br />
-                    <span style={{ color: ACCENT }}>Zero manual effort.</span>
+            {/* Heading */}
+            <div className="text-center mb-16 md:mb-20 relative z-1 max-w-2xl mx-auto px-4">
+                <h2 className="text-4xl md:text-[44px] font-bold text-white tracking-tight font-montserrat leading-[1.15] mb-4">
+                    Every stop. Every update.<br className="hidden sm:block" />
+                    <span className="text-[#F4C430]">Zero manual effort.</span>
                 </h2>
-                <p style={{
-                    fontSize: 'clamp(0.8rem, 1.4vw, 0.95rem)',
-                    color: 'rgba(255,255,255,0.38)',
-                    maxWidth: 400,
-                    margin: '0 auto',
-                    lineHeight: 1.6,
-                }}>
+                <p className="mt-4 text-neutral-400 max-w-xl mx-auto text-base md:text-lg font-inter">
                     Notifications push automatically from GPS — no driver input required.
                 </p>
             </div>

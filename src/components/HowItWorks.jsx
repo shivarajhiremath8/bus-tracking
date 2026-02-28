@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const ACCENT = '#F4C430';
-const STAGE_DURATION = 10000;
+const STAGE_DURATION = 6000;
 
 const storyStages = [
     {
@@ -106,27 +106,15 @@ const IconCheck = ({ size = 20, color = 'currentColor' }) => (
 
 // Clean building icon with simple windows
 const IconBuilding = ({ size = 26, color = 'currentColor' }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-        {/* Roof */}
-        <path d="M3 9L12 3l9 6" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        {/* Building body */}
-        <rect x="3" y="9" width="18" height="12" rx="0.75" stroke={color} strokeWidth="1.5" strokeLinejoin="round" />
-        {/* Windows - top row */}
-        <rect x="6" y="12" width="2.5" height="2.5" rx="0.4" stroke={color} strokeWidth="1" />
-        <rect x="10.5" y="12" width="2.5" height="2.5" rx="0.4" stroke={color} strokeWidth="1" />
-        <rect x="15" y="12" width="2.5" height="2.5" rx="0.4" stroke={color} strokeWidth="1" />
-        {/* Windows - bottom row */}
-        <rect x="6" y="17" width="2.5" height="2.5" rx="0.4" stroke={color} strokeWidth="1" />
-        <rect x="10.5" y="17" width="2.5" height="2.5" rx="0.4" stroke={color} strokeWidth="1" />
-        <rect x="15" y="17" width="2.5" height="2.5" rx="0.4" stroke={color} strokeWidth="1" />
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
     </svg>
 );
 
 const IconHome = ({ size = 24, color = 'currentColor' }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-        <path d="M3 12L12 4l9 8" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M5.5 10.2V20h13V10.2" stroke={color} strokeWidth="1.5" strokeLinejoin="round" />
-        <rect x="9.5" y="14" width="5" height="6" rx="0.75" stroke={color} strokeWidth="1.25" />
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
     </svg>
 );
 
@@ -206,8 +194,8 @@ export default function HowItWorks() {
                     Every stop. Every update.<br className="hidden sm:block" />
                     <span className="text-[#F4C430]">Zero manual effort.</span>
                 </h2>
-                <p className="mt-4 text-neutral-400 max-w-xl mx-auto text-base md:text-lg font-inter">
-                    Notifications push automatically from GPS — no driver input required.
+                <p className="mt-4 text-neutral-400 max-w-xl mx-auto text-base md:text-lg font-inter whitespace-nowrap">
+                    Notifications push automatically from GPS no driver input required.
                 </p>
             </div>
 

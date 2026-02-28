@@ -71,10 +71,10 @@ const Navbar = () => {
                 className={`fixed inset-0 w-full h-screen bg-black flex flex-col items-center justify-center space-y-8 transition-all duration-300 md:hidden z-40
                 ${isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}`}
             >
-                <a href="#home" onClick={() => setIsMobileMenuOpen(false)} className="text-3xl font-bold text-white hover:text-[#F4C430] transition-colors">Home</a>
-                <a href="#ecosystem" onClick={() => setIsMobileMenuOpen(false)} className="text-3xl font-bold text-white hover:text-[#F4C430] transition-colors">Eco System</a>
-                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="text-3xl font-bold text-white hover:text-[#F4C430] transition-colors">Contact Us</a>
-                <a href="#howitworks" onClick={() => setIsMobileMenuOpen(false)} className="mt-8 bg-[#F4C430] text-black px-10 py-4 rounded-full text-lg font-bold">Watch Demo</a>
+                <a href="#home" onClick={() => setIsMobileMenuOpen(false)} aria-label="Navigate to home section" className="text-3xl font-bold text-white hover:text-[#F4C430] transition-colors">Home</a>
+                <a href="#ecosystem" onClick={() => setIsMobileMenuOpen(false)} aria-label="Navigate to ecosystem section" className="text-3xl font-bold text-white hover:text-[#F4C430] transition-colors">Eco System</a>
+                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} aria-label="Navigate to contact section" className="text-3xl font-bold text-white hover:text-[#F4C430] transition-colors">Contact Us</a>
+                <a href="#howitworks" onClick={() => setIsMobileMenuOpen(false)} aria-label="Watch the demo video" className="mt-8 bg-[#F4C430] text-black px-10 py-4 rounded-full text-lg font-bold">Watch Demo</a>
             </div>
         </header>
     );

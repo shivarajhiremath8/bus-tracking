@@ -67,10 +67,12 @@ const DomainGraphic = ({ id }) => {
                         <path d="M 45 60 L 65 40 L 85 50" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="1 2" />
                         <path d="M 50 70 L 70 70 L 80 40" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="1 2" />
                         <motion.circle r="1.5" fill="currentColor"
+                            cx={45} cy={60}
                             animate={{ cx: [45, 65, 85], cy: [60, 40, 50] }}
                             transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
                         />
                         <motion.circle r="1.5" fill="currentColor"
+                            cx={50} cy={70}
                             animate={{ cx: [50, 70, 80], cy: [70, 70, 40] }}
                             transition={{ duration: 6, repeat: Infinity, ease: "linear", delay: 1 }}
                         />
@@ -85,7 +87,7 @@ const DomainGraphic = ({ id }) => {
                         <rect x="60" y="20" width="30" height="60" rx="3" fill="none" stroke="currentColor" strokeWidth="1" />
                         <line x1="70" y1="24" x2="80" y2="24" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
                         <line x1="75" y1="35" x2="75" y2="70" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
-                        <motion.circle cx="75" r="2.5" fill="currentColor"
+                        <motion.circle cx={75} cy={35} r="2.5" fill="currentColor"
                             animate={{ cy: [35, 70] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
                         />

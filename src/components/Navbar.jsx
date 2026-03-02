@@ -31,7 +31,7 @@ const Navbar = () => {
         <header
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out font-montserrat 
             ${isVisible ? 'translate-y-0' : '-translate-y-full'} 
-            ${isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-neutral-900 py-4' : 'bg-transparent py-5'}`}
+            ${isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-neutral-900' : 'bg-transparent'} py-4`}
         >
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
 

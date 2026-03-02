@@ -194,20 +194,14 @@ export default function HowItWorks() {
                     Every stop. Every update.<br className="hidden sm:block" />
                     <span className="text-[#F4C430]">Zero manual effort.</span>
                 </h2>
-                <p className="mt-4 text-neutral-400 max-w-xl mx-auto text-base md:text-lg font-inter whitespace-nowrap">
+                <p className="mt-4 text-neutral-400 max-w-xl mx-auto text-base md:text-lg font-inter">
                     Notifications push automatically from GPS no driver input required.
                 </p>
             </div>
 
             {/* Canvas */}
-            <div style={{
-                position: 'relative', width: '100%', maxWidth: 900, zIndex: 1,
-                background: '#0A0A0A',
-                borderRadius: 32,
-                border: '1px solid rgba(255,255,255,0.08)',
-                boxShadow: '0 40px 100px rgba(0,0,0,0.8)',
-                overflow: 'hidden',
-            }}>
+            <div className="relative w-full max-w-[90vw] sm:max-w-[900px] z-1 bg-[#0A0A0A] rounded-2xl border border-white/8 overflow-hidden"
+                style={{ boxShadow: '0 40px 100px rgba(0,0,0,0.8)' }}>
 
                 {/* Status bar */}
                 <div style={{
@@ -257,10 +251,10 @@ export default function HowItWorks() {
                 </div>
 
                 {/* Notification + route */}
-                <div style={{ padding: '40px 20px 60px 20px' }}>
+                <div className="px-5 sm:px-8 pt-10 pb-16">
 
                     {/* Notification card */}
-                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 100, marginBottom: 40 }}>
+                    <div className="flex justify-center items-center min-h-[100px] mb-10">
                         <AnimatePresence mode="wait">
                             {stage.notification ? (
                                 <motion.div
@@ -268,14 +262,7 @@ export default function HowItWorks() {
                                     initial={{ opacity: 0, scale: 0.9, y: 10 }}
                                     animate={{ opacity: 1, scale: 1, y: 0, transition: { delay: 1.5, duration: 0.5 } }}
                                     exit={{ opacity: 0, scale: 0.9, y: -10 }}
-                                    style={{
-                                        display: 'flex', alignItems: 'center', gap: 16,
-                                        width: 320, padding: '16px 20px',
-                                        background: '#111111',
-                                        border: '1px solid rgba(244,196,48,0.2)',
-                                        borderRadius: 20,
-                                        boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
-                                    }}
+                                    className="flex items-center gap-4 w-full max-w-[90vw] sm:w-[320px] p-4 bg-[#111111] border border-[rgba(244,196,48,0.2)] rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
                                 >
                                     <div style={{
                                         width: 40, height: 40, borderRadius: 12, flexShrink: 0,
@@ -307,7 +294,7 @@ export default function HowItWorks() {
                     </div>
 
                     {/* Route map */}
-                    <div style={{ position: 'relative', height: 160 }}>
+                    <div className="relative h-[120px] sm:h-[160px]">
                         {/* Road line */}
                         <div style={{ position: 'absolute', bottom: 60, left: '10%', right: '10%', height: 1, background: 'rgba(255,255,255,0.1)' }} />
 
